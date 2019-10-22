@@ -1,13 +1,57 @@
- //declare bacteria variables here   
+Bacteria[] reily; 
  void setup()   
- {     
- 	//initialize bacteria variables here   
+ {    
+   size(900, 900);
+   background(0);
+   reily = new Bacteria[1000]; 
+   for(int i = 0; i < reily.length; i++){
+     reily[i] = new Bacteria();
+   }
+   //0, -1, 1, 1, 2
+   
  }   
  void draw()   
  {    
- 	//move and show the bacteria   
- }  
+    
+    for (int i = 0; i <reily.length; i++){
+      reily[i].show();
+      reily[i].walk();
+   }
+   
+   fill(0);
+   stroke(0);
+   ellipse(mouseX, mouseY, 100,100);
+   
+ }
  class Bacteria    
- {     
- 	//lots of java!   
- }    
+ {    
+   int myX, myY, myColor;
+   
+   Bacteria(){
+   myColor = color((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
+   
+   myX = 450;
+   myY = 450;
+   
+   }
+   void show(){
+     fill(myColor);
+     stroke(myColor);
+     ellipse(myX, myY, 1, 1);
+   }
+   
+   void walk(){
+     
+     int dir = (int)(Math.random() *4);
+     if(dir == 0){
+        myX = myX + 2;
+     }else if (dir == 1){
+        myX = myX - 2;
+     }else if (dir == 2){
+        myY = myY - 2;
+     }else{
+        myY = myY + 2;
+     }
+       
+   }
+ }
