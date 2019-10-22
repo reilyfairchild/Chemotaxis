@@ -1,7 +1,7 @@
 Bacteria[] reily; 
  void setup()   
  {    
-   size(500, 500);
+   size(300, 300);
    background(0);
    reily = new Bacteria[1000]; 
    for(int i = 0; i < reily.length; i++){
@@ -30,8 +30,8 @@ Bacteria[] reily;
    Bacteria(){
    myColor = color((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
    
-   myX = 450;
-   myY = 450;
+   myX = 150;
+   myY = 150;
    
    }
    void show(){
