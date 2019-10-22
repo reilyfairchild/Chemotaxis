@@ -1,7 +1,7 @@
 Bacteria[] reily; 
  void setup()   
  {    
-   size(900, 900);
+   size(500, 500);
    background(0);
    reily = new Bacteria[1000]; 
    for(int i = 0; i < reily.length; i++){
@@ -20,7 +20,7 @@ Bacteria[] reily;
    
    fill(0);
    stroke(0);
-   ellipse(mouseX, mouseY, 100,100);
+   ellipse(mouseX, mouseY, 80,80);
    
  }
  class Bacteria    
